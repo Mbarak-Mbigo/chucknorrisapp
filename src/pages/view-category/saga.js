@@ -10,7 +10,7 @@ import { getRandomCategoryJoke } from "../../apiEndpoints";
 export function* fetchCategoryRandomJoke({ category }) {
   try {
     const {
-      body: { category: categoryList, icon_url, id, value }
+      body: { categories: categoryList, icon_url, id, value }
     } = yield call(getRandomCategoryJoke, category);
 
     yield put(
